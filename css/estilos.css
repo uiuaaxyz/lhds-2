@@ -1,0 +1,832 @@
+/* =====================================================
+   La Hermana de Shakespeare - estilos
+   Basado en ejemplos de W3Schools (CSS Tutorial y "How To").
+   Cada bloque dice de qué ejemplo viene.
+   ===================================================== */
+
+/* ---------- Básicos (W3Schools: CSS Box Sizing, CSS Fonts) ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Archivo", Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  background-color: #f3efe6;
+  color: #0e0d0c;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+.seccion {
+  padding: 80px 0;
+}
+
+.oscura {
+  background-color: #0e0d0c;
+  color: #f3efe6;
+}
+
+.beige {
+  background-color: #e8e2d5;
+}
+
+/* Tipografías */
+.gotica {
+  font-family: "UnifrakturMaguntia", serif;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.etiqueta {
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0;
+}
+
+h2.titulo {
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 60px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+
+.intro {
+  font-size: 19px;
+  max-width: 650px;
+  margin-bottom: 32px;
+}
+
+/* Degradado de la marca (W3Schools: CSS Gradients) */
+.degradado {
+  background-image: linear-gradient(to right, #7a2cf0, #ec1f8c, #ff6b1a, #ffd23f);
+}
+
+.texto-degradado {
+  background-image: linear-gradient(to right, #7a2cf0, #ec1f8c, #ff6b1a, #ffd23f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Botones (W3Schools: CSS Buttons) ---------- */
+.boton {
+  display: inline-block;
+  background-color: #0e0d0c;
+  color: #f3efe6;
+  border: 2px solid #0e0d0c;
+  padding: 14px 22px;
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 4px 4px 4px 0;
+}
+
+.boton:hover {
+  background-color: #ec1f8c;
+  border-color: #ec1f8c;
+  color: white;
+}
+
+.boton-claro {
+  background-color: #f3efe6;
+  color: #0e0d0c;
+  border-color: #f3efe6;
+}
+
+.boton-borde {
+  background-color: transparent;
+  color: inherit;
+  border-color: currentColor;
+}
+
+.boton-chico {
+  padding: 8px 14px;
+  font-size: 12px;
+}
+
+/* ---------- Menú (W3Schools How To: Responsive Top Navigation + Sticky) ---------- */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #f3efe6;
+  border-bottom: 2px solid #0e0d0c;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  padding: 24px 14px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.topnav a:hover {
+  background-color: #0e0d0c;
+  color: #f3efe6;
+}
+
+.topnav a.logo {
+  padding: 10px 16px 10px 0;
+}
+
+.topnav a.logo:hover {
+  background-color: transparent;
+}
+
+.topnav a.logo img {
+  height: 50px;
+  display: block;
+}
+
+.topnav .derecha {
+  float: right;
+}
+
+.topnav a.cta {
+  margin: 12px 0 12px 10px;
+  padding: 12px 16px;
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+  border: 2px solid #0e0d0c;
+}
+
+.topnav a.icon {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .topnav a:not(.logo) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 16px;
+    top: 0;
+  }
+  .topnav.responsive a.cta {
+    margin: 10px 0 16px 0;
+  }
+  .topnav.responsive .derecha {
+    float: none;
+  }
+}
+
+/* ---------- Portada (W3Schools How To: Hero Image) ---------- */
+.hero-image {
+  background-image:
+    linear-gradient(rgba(122, 44, 240, 0.75), rgba(236, 31, 140, 0.55), rgba(14, 13, 12, 0.95)),
+    url("../img/archivo/2023-07-casa-del-libro-05.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 90px 0 60px 0;
+}
+
+.hero-image .logo-grande {
+  width: 600px;
+  max-width: 85%;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.hero-image h1 {
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 50px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  max-width: 750px;
+  margin: 0 0 16px 0;
+}
+
+.hero-image h1 span {
+  background-color: #ffd23f;
+  color: #0e0d0c;
+  padding: 0 6px;
+}
+
+.hero-image p {
+  font-size: 19px;
+  max-width: 560px;
+}
+
+/* Cinta en movimiento (W3Schools: CSS Animations) */
+.cinta {
+  background-color: #ffd23f;
+  border-top: 2px solid #0e0d0c;
+  border-bottom: 2px solid #0e0d0c;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 12px 0;
+}
+
+.cinta span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: mover 30s linear infinite;
+}
+
+@keyframes mover {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* ---------- Filtros (W3Schools How To: Filter Elements) ---------- */
+.filtros {
+  margin-bottom: 24px;
+}
+
+.btn-filtro {
+  border: 2px solid #0e0d0c;
+  background-color: transparent;
+  padding: 8px 14px;
+  margin: 0 4px 8px 0;
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-filtro:hover,
+.btn-filtro.active {
+  background-color: #0e0d0c;
+  color: #f3efe6;
+}
+
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* ---------- Tarjetas de eventos (W3Schools How To: Responsive Column Cards) ---------- */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+.card {
+  background-color: white;
+  border: 2px solid #0e0d0c;
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: 6px 6px 0 #0e0d0c;
+}
+
+.card .fecha {
+  border-bottom: 2px solid #0e0d0c;
+  padding: 14px 18px;
+}
+
+.card .dia {
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 46px;
+  line-height: 1;
+}
+
+.card .mes {
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.card .info {
+  padding: 16px 18px;
+}
+
+.card h3 {
+  font-family: "Archivo Black", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1.1;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+/* Etiquetas de disciplina (W3Schools How To: Labels) */
+.label {
+  display: inline-block;
+  padding: 3px 8px;
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid #0e0d0c;
+}
+
+.label.slam { background-color: #ec1f8c; color: white; }
+.label.musica { background-color: #ffd23f; }
+.label.taller { background-color: #7a2cf0; color: white; }
+.label.cine { background-color: #0e0d0c; color: white; }
+.label.expo { background-color: #ff6b1a; }
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  h2.titulo {
+    font-size: 40px;
+  }
+  .hero-image h1 {
+    font-size: 32px;
+  }
+  .seccion {
+    padding: 56px 0;
+  }
+}
+
+/* ---------- Pestañas (W3Schools How To: Tabs) ---------- */
+.tab {
+  overflow: hidden;
+  border-bottom: 2px solid #f3efe6;
+}
+
+.tab button {
+  float: left;
+  background-color: inherit;
+  color: #f3efe6;
+  border: 2px solid #f3efe6;
+  border-bottom: none;
+  margin-right: 6px;
+  padding: 14px 18px;
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tab button:hover,
+.tab button.active {
+  background-color: #f3efe6;
+  color: #0e0d0c;
+}
+
+.tabcontent {
+  display: none;
+  padding: 24px 0;
+}
+
+.convocatoria {
+  background-color: #f3efe6;
+  color: #0e0d0c;
+  border-top: 6px solid #ec1f8c;
+  padding: 20px;
+  height: 100%;
+}
+
+.convocatoria h3 {
+  font-family: "Archivo Black", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin: 8px 0;
+}
+
+.abierta {
+  color: #0a7a33;
+  font-weight: bold;
+}
+
+/* Lista de convocatorias externas (W3Schools How To: List Group) */
+ul.lista {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.lista li {
+  border-bottom: 1px solid #555;
+  padding: 18px 0;
+}
+
+ul.lista li a {
+  text-decoration: none;
+}
+
+ul.lista li a:hover h3 {
+  color: #ffd23f;
+}
+
+ul.lista h3 {
+  font-family: "Archivo Black", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 4px 0;
+}
+
+ul.lista .org {
+  color: #ffd23f;
+}
+
+/* ---------- Ventana modal (W3Schools How To: Modal) ---------- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #f3efe6;
+  margin: auto;
+  padding: 24px;
+  border: 2px solid #0e0d0c;
+  width: 90%;
+  max-width: 540px;
+  box-shadow: 8px 8px 0 #ec1f8c;
+}
+
+.close {
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ec1f8c;
+}
+
+/* Formulario (W3Schools How To: Contact Form) */
+input[type=text],
+input[type=email],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #0e0d0c;
+  margin: 6px 0 14px 0;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: white;
+}
+
+label {
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/* ---------- Revista (W3Schools How To: Blockquote / Testimonials) ---------- */
+.cita {
+  background-color: white;
+  border: 2px solid #0e0d0c;
+  padding: 24px;
+  height: 100%;
+}
+
+.cita blockquote {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  margin: 12px 0 18px 0;
+}
+
+.cita blockquote:before {
+  content: "\201C";
+  font-size: 60px;
+  line-height: 0.1;
+  vertical-align: -0.4em;
+  margin-right: 4px;
+  color: #ec1f8c;
+}
+
+.cita h3 {
+  font-family: "Archivo Black", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 17px;
+  margin: 0;
+}
+
+/* ---------- Galería (W3Schools How To: Image Grid + Modal Images) ---------- */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.galeria img:hover {
+  filter: none;
+}
+
+.galeria .ancha {
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 700px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#imgModal {
+  text-align: center;
+}
+
+#imgModal img {
+  max-width: 92%;
+  max-height: 80vh;
+}
+
+#imgModal .caption {
+  color: white;
+  padding: 12px;
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+}
+
+#imgModal .close {
+  color: white;
+  position: absolute;
+  top: 14px;
+  right: 24px;
+  font-size: 44px;
+}
+
+/* Cifras */
+.cifras .column {
+  border-left: 2px solid #0e0d0c;
+}
+
+.cifras b {
+  display: block;
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 48px;
+}
+
+/* ---------- Sobre nosotras ---------- */
+.caja {
+  border: 2px solid #0e0d0c;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.caja h3 {
+  font-family: "Archivo Black", Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.equipo p {
+  border-bottom: 1px solid #c9c1b2;
+  padding-bottom: 10px;
+}
+
+.equipo small {
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  text-transform: uppercase;
+  color: #6b655c;
+}
+
+/* Línea del tiempo (W3Schools How To: Timeline, versión simple) */
+.linea {
+  border-left: 4px solid #ec1f8c;
+  padding-left: 20px;
+}
+
+.linea p {
+  margin: 0 0 14px 0;
+}
+
+.linea b {
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+/* ---------- Pie de página ---------- */
+.footer {
+  background-color: #0e0d0c;
+  color: #f3efe6;
+  padding: 60px 0 90px 0;
+}
+
+.footer .manifiesto {
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 44px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  max-width: 900px;
+  margin: 0 0 16px 0;
+}
+
+.footer h4 {
+  color: #ffd23f;
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: 8px;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffd23f;
+}
+
+@media screen and (max-width: 600px) {
+  .footer .manifiesto {
+    font-size: 28px;
+  }
+}
+
+/* Botón flotante (W3Schools How To: Scroll To Top Button) */
+#botonFlotante {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 15;
+  border: 2px solid #0e0d0c;
+  color: #0e0d0c;
+  padding: 14px 18px;
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 #0e0d0c;
+}
+
+/* ---------- Página del archivo ---------- */
+.anios {
+  position: sticky;
+  top: 72px;
+  z-index: 5;
+  background-color: #f3efe6;
+  border-bottom: 2px solid #0e0d0c;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.anios a {
+  display: inline-block;
+  padding: 12px 18px;
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  border-right: 2px solid #0e0d0c;
+}
+
+.anios a:hover {
+  background-color: #0e0d0c;
+  color: #f3efe6;
+}
+
+.anio {
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 110px;
+  line-height: 1;
+  margin: 50px 0 10px 0;
+}
+
+.evento-archivo {
+  border-top: 1px solid #c9c1b2;
+  padding: 24px 0;
+}
+
+.evento-archivo h3 {
+  font-family: "Archivo Black", Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 4px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .anio {
+    font-size: 70px;
+  }
+  .anios {
+    top: 70px;
+  }
+}
+
+/* Columnas de distintos anchos (W3Schools How To: Two Column Layout) */
+.col-55 { width: 55%; }
+.col-45 { width: 45%; }
+.col-50 { width: 50%; }
+
+@media screen and (max-width: 900px) {
+  .col-55, .col-45, .col-50 { width: 100%; }
+}
+
+/* Columnas de la misma altura (W3Schools How To: Equal Height Columns con Flexbox) */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  float: none;
+}
+
+.filterDiv {
+  display: none;
+}
+
+.filterDiv.show {
+  display: block;
+}
+
+/* Títulos en letra gótica */
+.titulo.gotica,
+h2.titulo.gotica {
+  font-family: "UnifrakturMaguntia", serif;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 72px;
+}
+
+.caja.oscura {
+  background-color: #0e0d0c;
+  color: #f3efe6;
+}
+
+@media screen and (max-width: 600px) {
+  .titulo.gotica,
+  h2.titulo.gotica {
+    font-size: 52px;
+  }
+}
